@@ -62,11 +62,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainFrom.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainFrom.Designer.cs">
-      <DependentUpon>MainFrom.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs">
       <SubType>UserControl</SubType>
@@ -77,9 +77,15 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecipiantData.cs" />
+    <Compile Include="TabContent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabContent.Designer.cs">
+      <DependentUpon>TabContent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility.cs" />
-    <EmbeddedResource Include="MainFrom.resx">
-      <DependentUpon>MainFrom.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Person.resx">
       <DependentUpon>Person.cs</DependentUpon>
@@ -94,6 +100,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TabContent.resx">
+      <DependentUpon>TabContent.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
