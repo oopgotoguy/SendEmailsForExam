@@ -60,8 +60,9 @@ namespace SendEmailsForExam
             MessageBox.Show("done");
         }
 
-        void LoadData()
+        void LoadData(string searchKey = "")
         {
+            pnlTo.Controls.Clear();
             txtFrom.Text = Properties.Settings.Default.From;
             txtBody.Text = Properties.Settings.Default.Body;
             txtPassword.Text = Properties.Settings.Default.Password;
@@ -74,8 +75,19 @@ namespace SendEmailsForExam
                 var lst = System.IO.File.ReadAllLines(savingPath);
                 foreach (var item in lst)
                 {
-                    Person p = new Person(item);
-                    pnlTo.Controls.Add(p);
+                    if (string.IsNullOrEmpty(searchKey))
+                    {
+                        Person p = new Person(item);
+                        pnlTo.Controls.Add(p);
+                    }
+                    else
+                    {
+                        if (item.ToLower().Contains(searchKey))
+                        {
+                            Person p = new Person(item);
+                            pnlTo.Controls.Add(p);
+                        }
+                    }
                 }
             }
         }
@@ -103,6 +115,11 @@ namespace SendEmailsForExam
                 }
             }
             MessageBox.Show("done");
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            LoadData(txtSearch.Text);
         }
     }
 }

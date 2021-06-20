@@ -71,7 +71,7 @@ namespace SendEmailsForExam
             var result = new RecipiantData();
             result.Attachments = new List<string>();
             result.Name = txtName.Text;
-            result.To = txtTo.Text;
+            result.To = txtTo.Text.Trim();
             if(!string.IsNullOrEmpty(txtAttach1.Text) && System.IO.File.Exists(txtAttach1.Text))
             {
                 result.Attachments.Add(txtAttach1.Text);
@@ -81,6 +81,22 @@ namespace SendEmailsForExam
                 result.Attachments.Add(txtAttach2.Text);
             }
             return result;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var mnf = Application.OpenForms["MainFrom"] as MainFrom;
+            var data = this.GetData();
+            Utility.sendMail
+                       (data.To,
+                       data.Attachments.ToArray(),
+                       mnf.txtSubject.Text,
+                       mnf.txtBody.Text,
+                       mnf.txtFrom.Text,
+                       mnf.txtServer.Text,
+                       Convert.ToInt32(mnf.txtPort.Text),
+                       mnf.txtPassword.Text);
+            MessageBox.Show("done");
         }
     }
 }

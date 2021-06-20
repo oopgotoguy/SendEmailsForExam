@@ -111,6 +111,7 @@
   <ItemGroup>
     <None Include="Resources\Close-2-icon.png" />
     <None Include="Resources\Folder-icon.png" />
+    <None Include="Resources\email-send-icon.png" />
     <Content Include="Wwalczyszyn-Android-Style-Mail.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

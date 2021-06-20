@@ -47,6 +47,7 @@ namespace SendEmailsForExam
             this.btnAdd = new System.Windows.Forms.Button();
             this.BtnSaveData = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSend
@@ -194,11 +195,21 @@ namespace SendEmailsForExam
             this.progressBar1.Size = new System.Drawing.Size(138, 10);
             this.progressBar1.TabIndex = 16;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtSearch.Location = new System.Drawing.Point(962, 67);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(138, 20);
+            this.txtSearch.TabIndex = 17;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
             // MainFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 699);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.BtnSaveData);
             this.Controls.Add(this.btnAdd);
@@ -228,22 +239,23 @@ namespace SendEmailsForExam
         #endregion
 
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.TextBox txtFrom;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSubject;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtServer;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtPort;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.FlowLayoutPanel pnlTo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtBody;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button BtnSaveData;
         private System.Windows.Forms.ProgressBar progressBar1;
+        public System.Windows.Forms.TextBox txtFrom;
+        public System.Windows.Forms.TextBox txtSubject;
+        public System.Windows.Forms.TextBox txtServer;
+        public System.Windows.Forms.TextBox txtPort;
+        public System.Windows.Forms.TextBox txtPassword;
+        public System.Windows.Forms.TextBox txtBody;
+        public System.Windows.Forms.TextBox txtSearch;
     }
 }
 
