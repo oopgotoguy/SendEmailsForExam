@@ -13,7 +13,7 @@ namespace SendEmailsForExam
         public static void sendMail(string to, string[] filePaths, string subject, string body,string from,string server,int port,string password)
         {
             MimeKit.MimeMessage message = new MimeKit.MimeMessage();
-            message.From.Add(new MimeKit.MailboxAddress("email_from", from));
+            message.From.Add(new MimeKit.MailboxAddress(from.Split('@').First(), from));
             message.To.Add(new MimeKit.MailboxAddress("email_to", to));
             message.Subject = subject;
 

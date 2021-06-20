@@ -59,9 +59,9 @@ namespace SendEmailsForExam
             this.btnSend.ForeColor = System.Drawing.Color.White;
             this.btnSend.Location = new System.Drawing.Point(1122, 13);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(161, 33);
+            this.btnSend.Size = new System.Drawing.Size(161, 50);
             this.btnSend.TabIndex = 0;
-            this.btnSend.Text = "Send To All";
+            this.btnSend.Text = "Send To All\r\nCurrent Tab";
             this.btnSend.UseVisualStyleBackColor = false;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
@@ -166,28 +166,28 @@ namespace SendEmailsForExam
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAdd.Location = new System.Drawing.Point(1122, 157);
+            this.btnAdd.Location = new System.Drawing.Point(1122, 173);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(161, 43);
             this.btnAdd.TabIndex = 14;
-            this.btnAdd.Text = "Add Recipient Current Tab";
+            this.btnAdd.Text = "Add Recipient\r\nCurrent Tab";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // BtnSaveData
             // 
             this.BtnSaveData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.BtnSaveData.Location = new System.Drawing.Point(1122, 100);
+            this.BtnSaveData.Location = new System.Drawing.Point(1122, 116);
             this.BtnSaveData.Name = "BtnSaveData";
             this.BtnSaveData.Size = new System.Drawing.Size(161, 51);
             this.BtnSaveData.TabIndex = 15;
-            this.BtnSaveData.Text = "Save Data Current Tab";
+            this.BtnSaveData.Text = "Save Data\r\nCurrent Tab";
             this.BtnSaveData.UseVisualStyleBackColor = false;
             this.BtnSaveData.Click += new System.EventHandler(this.BtnSaveData_Click);
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(1122, 53);
+            this.progressBar1.Location = new System.Drawing.Point(1122, 71);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(161, 11);
             this.progressBar1.TabIndex = 16;
@@ -195,7 +195,7 @@ namespace SendEmailsForExam
             // txtSearch
             // 
             this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtSearch.Location = new System.Drawing.Point(1122, 72);
+            this.txtSearch.Location = new System.Drawing.Point(1122, 90);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(160, 22);
             this.txtSearch.TabIndex = 17;

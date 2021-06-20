@@ -183,8 +183,11 @@ namespace SendEmailsForExam
             {
                 if (!string.IsNullOrEmpty(txtNewTabName.Text))
                 {
-                    File.WriteAllText($"{SavingDirectory}\\{txtNewTabName.Text}.txt", "");
-                    LoadData();
+                    if (!File.Exists($"{SavingDirectory}\\{txtNewTabName.Text}.txt"))
+                    {
+                        File.WriteAllText($"{SavingDirectory}\\{txtNewTabName.Text}.txt", "");
+                        LoadData();
+                    }
                 }
                 else
                 {
