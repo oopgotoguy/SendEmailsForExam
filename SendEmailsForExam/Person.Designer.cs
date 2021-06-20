@@ -38,9 +38,9 @@ namespace SendEmailsForExam
             this.label4 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -54,9 +54,9 @@ namespace SendEmailsForExam
             // 
             // txtTo
             // 
-            this.txtTo.Location = new System.Drawing.Point(76, 3);
+            this.txtTo.Location = new System.Drawing.Point(92, 3);
             this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(360, 20);
+            this.txtTo.Size = new System.Drawing.Size(344, 20);
             this.txtTo.TabIndex = 3;
             // 
             // label2
@@ -70,9 +70,9 @@ namespace SendEmailsForExam
             // 
             // txtAttach1
             // 
-            this.txtAttach1.Location = new System.Drawing.Point(76, 40);
+            this.txtAttach1.Location = new System.Drawing.Point(92, 40);
             this.txtAttach1.Name = "txtAttach1";
-            this.txtAttach1.Size = new System.Drawing.Size(360, 20);
+            this.txtAttach1.Size = new System.Drawing.Size(344, 20);
             this.txtAttach1.TabIndex = 5;
             // 
             // label3
@@ -86,9 +86,9 @@ namespace SendEmailsForExam
             // 
             // txtAttach2
             // 
-            this.txtAttach2.Location = new System.Drawing.Point(76, 66);
+            this.txtAttach2.Location = new System.Drawing.Point(92, 66);
             this.txtAttach2.Name = "txtAttach2";
-            this.txtAttach2.Size = new System.Drawing.Size(360, 20);
+            this.txtAttach2.Size = new System.Drawing.Size(344, 20);
             this.txtAttach2.TabIndex = 7;
             // 
             // label4
@@ -103,9 +103,9 @@ namespace SendEmailsForExam
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtName.Location = new System.Drawing.Point(76, 95);
+            this.txtName.Location = new System.Drawing.Point(92, 95);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(360, 20);
+            this.txtName.Size = new System.Drawing.Size(344, 20);
             this.txtName.TabIndex = 9;
             // 
             // button3
@@ -118,6 +118,17 @@ namespace SendEmailsForExam
             this.button3.TabIndex = 13;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::SendEmailsForExam.Properties.Resources.email_send_icon;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Location = new System.Drawing.Point(442, 93);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(28, 22);
+            this.button4.TabIndex = 12;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -141,21 +152,11 @@ namespace SendEmailsForExam
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::SendEmailsForExam.Properties.Resources.email_send_icon;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(442, 93);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(28, 22);
-            this.button4.TabIndex = 12;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // Person
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
@@ -169,7 +170,7 @@ namespace SendEmailsForExam
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTo);
             this.Name = "Person";
-            this.Size = new System.Drawing.Size(474, 121);
+            this.Size = new System.Drawing.Size(474, 126);
             this.Load += new System.EventHandler(this.Person_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,16 +180,16 @@ namespace SendEmailsForExam
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtAttach1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtAttach2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        public System.Windows.Forms.TextBox txtTo;
+        public System.Windows.Forms.TextBox txtName;
+        public System.Windows.Forms.TextBox txtAttach1;
+        public System.Windows.Forms.TextBox txtAttach2;
     }
 }

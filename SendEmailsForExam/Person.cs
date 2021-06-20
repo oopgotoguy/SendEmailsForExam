@@ -20,7 +20,10 @@ namespace SendEmailsForExam
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            if (MessageBox.Show("Are you sure?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Dispose();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,10 +50,12 @@ namespace SendEmailsForExam
         {
             return txtTo.Text + "?" + txtAttach1.Text + "?" + txtAttach2.Text + "?" + txtName.Text;
         }
-
+        Color oroginal;
+        Color smallColor = Color.White;
         void LoadData(string line)
         {
-            if(string.IsNullOrEmpty(line))
+            oroginal = this.BackColor;
+            if (string.IsNullOrEmpty(line))
             {
                 return;
             }
@@ -59,6 +64,18 @@ namespace SendEmailsForExam
             txtAttach1.Text = split[1];
             txtAttach2.Text = split[2];
             txtName.Text = split[3];
+        }
+
+        public void Larg()
+        {
+            this.Height = 126;
+            this.BackColor = oroginal;
+        }
+
+        public void Small()
+        {
+            this.Height = 24;
+            this.BackColor = smallColor;
         }
 
         private void Person_Load(object sender, EventArgs e)
@@ -72,7 +89,7 @@ namespace SendEmailsForExam
             result.Attachments = new List<string>();
             result.Name = txtName.Text;
             result.To = txtTo.Text.Trim();
-            if(!string.IsNullOrEmpty(txtAttach1.Text) && System.IO.File.Exists(txtAttach1.Text))
+            if (!string.IsNullOrEmpty(txtAttach1.Text) && System.IO.File.Exists(txtAttach1.Text))
             {
                 result.Attachments.Add(txtAttach1.Text);
             }
@@ -85,7 +102,7 @@ namespace SendEmailsForExam
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var mnf = Application.OpenForms["MainFrom"] as MainFrom;
+            var mnf = Application.OpenForms["MainForm"] as MainForm;
             var data = this.GetData();
             Utility.sendMail
                        (data.To,
